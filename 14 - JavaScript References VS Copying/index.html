@@ -27,8 +27,6 @@
     const team = players;
 
     console.log(players, team);
-    // You might think we can just do something like this:
-    // team[3] = 'Lux';
 
     // however what happens when we update that array?
 
@@ -48,8 +46,6 @@
 
     // or use the new ES6 Spread
     const team4 = [...players];
-    team4[3] = 'heeee hawww';
-    console.log(team4);
 
     const team5 = Array.from(players);
 
@@ -64,8 +60,7 @@
     };
 
     // and think we make a copy:
-    // const captain = person;
-    // captain.number = 99;
+
 
     // how do we take a copy instead?
     const cap2 = Object.assign({}, person, { number: 99, age: 12 });
@@ -76,17 +71,15 @@
 
     // Things to note - this is only 1 level deep - both for Arrays and Objects. lodash has a cloneDeep method, but you should think twice before using it.
 
-    const wes = {
-      name: 'Wes',
-      age: 100,
+    const me = {
+      name: 'Quang',
+      age: 20,
       social: {
-        twitter: '@wesbos',
-        facebook: 'wesbos.developer'
+        twitter: null,
+        facebook: null
       }
     };
 
-    console.clear();
-    console.log(wes);
 
     const dev = Object.assign({}, wes);
 
